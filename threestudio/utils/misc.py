@@ -24,9 +24,11 @@ def get_rank():
             return int(rank)
     return 0
 
-
+EXT_DEVICE = torch.device("cuda:0")
 def get_device():
-    return torch.device(f"cuda:{get_rank()}")
+    # TODO: GAURAV AND KARTHIK EDIT THIS STUPID FUNCTION TO CHANGE CUDA DEVICE
+    # return torch.device(f"cuda:{get_rank()}")
+    return EXT_DEVICE
 
 
 def load_module_weights(
